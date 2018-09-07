@@ -28,7 +28,7 @@ class Helper{
 		$md5Key = md5(serialize(get_defined_vars()));
 		$httpData = self::cache($md5Key,null,$cacheTime);
 		if(empty($httpData)){
-			sleep(rand(0,1));
+			usleep(rand(1000,500000)); //延迟1毫秒-0.5秒
 			$ch = curl_init();
 			curl_setopt($ch,CURLOPT_USERAGENT,'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36');
 			curl_setopt($ch,CURLOPT_URL,$url);
