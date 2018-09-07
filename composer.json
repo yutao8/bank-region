@@ -1,0 +1,19 @@
+{
+    "name": "yutao8/bank-region",
+    "description": "全国各银行开户行数据",
+    "type": "library",
+    "require":
+    {
+        "jaeger/querylist": "^4.0",
+        "symfony/dom-crawler": "^4.1",
+        "symfony/css-selector": "^4.1"
+    },
+    "license": "MIT",
+    "autoload":
+    {
+        "psr-4":
+        {
+            "yutao8\\BankRegion\\": "src/"
+        }
+    }
+}
