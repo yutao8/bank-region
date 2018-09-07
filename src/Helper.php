@@ -10,7 +10,7 @@ class Helper{
 
 	static function cache($key,$value = null,$cacheTime = 86400){
 		$key = is_string($key) ? $key : md5(serialize($key));
-		$cacheDir = __DIR__ . '/.temp/' . date('Ymd') . '/';
+		$cacheDir = __DIR__ . '/.temp/';
 		self::mkdirs($cacheDir) or die('create cacheDir error!');
 		$cacheFile = $cacheDir . $key . '.temp';
 		if(is_null($value)){ //读
