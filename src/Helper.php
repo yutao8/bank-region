@@ -25,7 +25,7 @@ class Helper{
 	}
 
 	static function http_get_cache($url = '',$cacheTime = 86400){
-		$md5Key = md5(serialize(get_defined_vars()));
+		$md5Key = md5($url);
 		$httpData = self::cache($md5Key,null,$cacheTime);
 		if(empty($httpData)){
 			usleep(rand(1000,500000)); //延迟1毫秒-0.5秒
